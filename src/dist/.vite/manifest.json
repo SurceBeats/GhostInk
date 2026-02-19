@@ -1,0 +1,17 @@
+{
+  "src/static/css/global.css": {
+    "file": "assets/global-C1-OSQW7.css",
+    "src": "src/static/css/global.css",
+    "isEntry": true,
+    "name": "global",
+    "names": [
+      "global.css"
+    ]
+  },
+  "src/static/js/main.js": {
+    "file": "assets/main-RgeWMa8o.js",
+    "name": "main",
+    "src": "src/static/js/main.js",
+    "isEntry": true
+  }
+}

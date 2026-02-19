@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GhostInk · Setup</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👻</text></svg>" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/static/css/auth.css" />
+  </head>
+  <body class="bg-[#0a0a0f] text-gray-200 min-h-screen flex items-center justify-center antialiased">
+    <div class="w-full max-w-md px-6">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
+          <span class="mr-2">👻🖋️</span>
+          <span class="shimmer-text">GhostInk</span>
+        </h1>
+        <p class="text-gray-500 mt-1 text-sm italic">Hide data in plain sight</p>
+        <p class="text-gray-600 mt-3 text-sm">Create your account to get started</p>
+      </div>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+      <div class="mb-4 px-4 py-3 rounded-lg text-sm {% if category == 'error' %}bg-red-500/10 border border-red-500/30 text-red-400 {% else %}bg-emerald-500/10 border border-emerald-500/30 text-emerald-400{% endif %}">{{ message }}</div>
+      {% endfor %} {% endif %} {% endwith %}
+
+      <form method="POST" class="bg-[#12121a] border border-gray-800 rounded-2xl p-8 space-y-5 shadow-xl">
+        <div>
+          <label for="username" class="block text-sm font-medium text-gray-400 mb-1.5">Username</label>
+          <input type="text" id="username" name="username" required autofocus class="w-full bg-[#0a0a0f] border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition" />
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-400 mb-1.5">Password</label>
+          <input type="password" id="password" name="password" required class="w-full bg-[#0a0a0f] border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition" />
+        </div>
+        <div>
+          <label for="confirm" class="block text-sm font-medium text-gray-400 mb-1.5">Confirm password</label>
+          <input type="password" id="confirm" name="confirm" required class="w-full bg-[#0a0a0f] border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition" />
+        </div>
+        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-semibold py-2.5 rounded-lg transition mt-2">Create Account</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GhostInk · Emoji Steganography</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👻</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    {{ vitecss("global") | safe }}
+
+    <script>
+      window.$RefreshReg$ = function () {};
+      window.$RefreshSig$ = function () {
+        return function (type) {
+          return type;
+        };
+      };
+      window.__vite_plugin_react_preamble_installed__ = true;
+    </script>
+
+    {% if dev_mode %}
+    <script type="module">
+      try {
+        const RefreshRuntime = await import("http://localhost:5174/@react-refresh");
+        RefreshRuntime.injectIntoGlobalHook(window);
+      } catch (error) {
+        console.warn("React Refresh runtime not available");
+      }
+    </script>
+    {% endif %}
+  </head>
+  <body class="bg-ghost-dark text-gray-200 min-h-screen antialiased">
+    <div id="root" data-username="{{ username }}"></div>
+    {{ vitejs("main") | safe }}
+  </body>
+</html>
