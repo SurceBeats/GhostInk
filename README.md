@@ -58,6 +58,14 @@ Open `http://localhost:12500` and create your account.
 
 Your data (`ghostink.ini`, `stash.json`) persists in `./ghostink_docker_volume`.
 
+## Install (HomeDock OS)
+
+Open **Packager** on **HomeDock OS** and drop the `ghostink.hds` file on Package Manager to make it instantly available on the App Store.
+
+<p>
+  <a href="ghostink.hds"><img src="public/ghostink-badge-light.svg" alt="Install on HomeDock OS" /></a>
+</p>
+
 ## Development
 
 Configure `RUN` and `PORT` at the top of `app.py`:
