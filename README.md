@@ -46,16 +46,17 @@ GhostInk maps each character of your secret message to its corresponding tag cha
 - **Backend**: [Flask](https://flask.palletsprojects.com/) + [Hypercorn](https://hypercorn.readthedocs.io/) + [Flask-Login](https://flask-login.readthedocs.io/) + [vite-fusion](https://github.com/BansheeTech/vite_fusion)
 - **Frontend**: React 18 + TailwindCSS 3 + Vite
 
-## Installation
+## Install (Docker)
 
 ```bash
-pip install -r requirements.txt
-npm install
+git clone https://github.com/SurceBeats/GhostInk.git
+cd GhostInk
+docker compose up -d
 ```
 
-## First run
+Open `http://localhost:12500` and create your account.
 
-On first launch, GhostInk will redirect you to `/setup` to create your account. Credentials are stored locally in `ghostink.ini` (bcrypt-hashed, never plaintext).
+Your data (`ghostink.ini`, `stash.json`) persists in `./ghostink_docker_volume`.
 
 ## Development
 
@@ -66,9 +67,10 @@ RUN = "DEV"       # "DEV" or "PROD"
 PORT = 12500
 ```
 
-Then run both processes:
-
 ```bash
+pip install -r requirements.txt
+npm install
+
 # Build once first (generates manifest.json required by vite-fusion)
 npm run build
 
@@ -76,17 +78,6 @@ npm run build
 npm run dev
 
 # Terminal 2: Flask server
-python3 app.py
-```
-
-## Production
-
-```python
-RUN = "PROD"
-```
-
-```bash
-npm run build
 python3 app.py
 ```
 
