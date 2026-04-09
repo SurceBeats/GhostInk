@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.234: Initial Release
+
+- Bugfixes
+- New footer with more info
+- README.md updated
+
 ## 0.0.1: Initial Release
 
 ### Added

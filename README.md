@@ -60,10 +60,10 @@ Your data (`ghostink.ini`, `stash.json`) persists in `./ghostink_docker_volume`.
 
 ## Install (HomeDock OS)
 
-Open **Packager** on **HomeDock OS** and drop the `ghostink.hds` file on Package Manager to make it instantly available on the App Store.
+Download [HomeDock OS](https://github.com/BansheeTech/HomeDockOS) and install it from the App Store.
 
 <p>
-  <a href="ghostink.hds"><img src="public/ghostink-badge-light.svg" alt="Install on HomeDock OS" /></a>
+  <a href="ghostink.hds"><img src="public/HDOSDarkBadge.svg" alt="Install on HomeDock OS" /></a>
 </p>
 
 ## Development

@@ -300,6 +300,11 @@ def send_src_dist(path):
     return send_from_directory(os.path.join(app.root_path, "src", "dist"), path)
 
 
+@app.route("/public/<path:path>")
+def send_public(path):
+    return send_from_directory(os.path.join(app.root_path, "public"), path)
+
+
 # Main app routes
 @app.route("/")
 @login_required
