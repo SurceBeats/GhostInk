@@ -46,15 +46,8 @@ export default function App({ username }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-ghost-border py-4 text-center space-y-1">
-        <p className="text-xs text-ghost-muted pb-2">GhostInk v0.0.1 &mdash; Emoji Steganography Tool</p>
-        {/* Row 3: GOAT badge */}
-        <div className="flex flex-col items-center gap-2 pt-3 border-t border-white/5">
-          <span className="text-[10px] text-gray-600 tracking-wide uppercase">Running it on elsewhereOS?</span>
-          <a href="https://github.com/BansheeTech/HomeDockOS" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity duration-500">
-            <img src="/public/HDOSDarkBadge.svg" />
-          </a>
-        </div>
+      <footer className="border-t border-ghost-border py-4 text-center">
+        <p className="text-xs text-ghost-muted">GhostInk v0.1.236 &mdash; Emoji Steganography Tool</p>
       </footer>
     </div>
   );

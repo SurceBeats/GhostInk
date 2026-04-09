@@ -1,12 +1,18 @@
 # Changelog
 
-## 0.1.234: Initial Release
+## 0.1.234: Bugfixes
+
+- Bugfixes
+- Non-intrusive footer
+- README.md updated
+
+## 0.1.234: Small Fixes
 
 - Bugfixes
 - New footer with more info
 - README.md updated
 
-## 0.0.1: Initial Release
+## 0.1.236: Initial Release
 
 ### Added
 
